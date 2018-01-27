@@ -10,12 +10,17 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    @artist = find_id
   end
 
   def edit
+    @artist = find_id
   end
 
   def update
+    @artist = find_id
+    @artist.update(strong_params)
+    redirect_to artist_path(@artist)
   end
 
   private
