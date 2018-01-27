@@ -25,7 +25,7 @@ class SongsController < ApplicationController
 
   private
   def strong_params
-    params.require(:song).permit(:name,:bio)
+    params.require(:song).permit(:name,:artist_id,:genre_id)
   end
 
   def find_id
