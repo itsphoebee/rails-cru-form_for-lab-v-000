@@ -1,11 +1,11 @@
 class SongsController < ApplicationController
 
   def new
-    @song = Artist.new
+    @song = Song.new
   end
 
   def create
-    @song = Artist.create(strong_params)
+    @song = Song.create(strong_params)
     redirect_to song_path(@song)
   end
 
@@ -29,6 +29,6 @@ class SongsController < ApplicationController
   end
 
   def find_id
-    Artist.find(params[:id])
+    Song.find(params[:id])
   end
 end
