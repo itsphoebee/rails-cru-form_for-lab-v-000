@@ -5,7 +5,8 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new(strong_params)
+    @artist = Artist.create(strong_params)
+    redirect_to artist_path(@artist)
   end
 
   def show
